@@ -1,0 +1,10 @@
+Teste de conexao do db:
+public static void main(String[] args) {
+  Connection c = DatabaseConnection.getConnection();
+  if (c != null) {
+  System.out.println("✅ Conectado com sucesso ao shopee_db!");
+  try { c.close(); } catch (Exception e) {}
+} else {
+System.out.println("❌ Falha na conexão. Verifique o MySQL ou o Driver.");
+}
+}

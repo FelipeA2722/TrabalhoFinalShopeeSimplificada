@@ -5,12 +5,19 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
+
+    private static DatabaseConnection instance;
     private static String DRIVE = "com.mysql.cj.jdbc.Driver";
     private static String URL = "jdbc:mysql://localhost:3306/shopee_db";
     private static String USER = "root";
     private static String PASSWORD = "root123";
 
-
+    public static DatabaseConnection getInstance() {
+        if (instance == null) {
+            instance = new DatabaseConnection();
+        }
+        return instance;
+    }
     public static Connection getConnection(){
         try {
             Class.forName(DRIVE);

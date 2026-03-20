@@ -1,4 +1,5 @@
 package com.shopee.pattern.strategy;
 
-public class PagamentoStrategy {
+public interface PagamentoStrategy {
+    void processarPagamento(double valor);
 }

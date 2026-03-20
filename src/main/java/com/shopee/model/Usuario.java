@@ -57,4 +57,5 @@ public class Usuario {
     public void setDataCadrastro(LocalDateTime dataCadrastro) {
         this.dataCadrastro = dataCadrastro;
     }
+
 }
